@@ -1,5 +1,5 @@
 print("////SISTEMA DE CONTROL DE VISITAS MEDICAS///")
-employee  =["eduardo"]
+employee  =[]
 password =[]
 while True:
     print("-Eliga una una de las opciones.-")
@@ -8,9 +8,17 @@ while True:
     option = int(input("responda aqui: "))
     if option == 1:
         user =str(input("ingrese su nombre de usuario: "))
+        clave =str(input("ingrese su contraseña"))
         if user  not in employee:
             employee.append(user)
+            password.append(clave)
         else:
             print("este usuario ya existe ingrese otro")    
-
-        break
+    if option == 1:
+        user =str(input("ingrese su nombre de usuario: "))
+        clave =str(input("ingrese su contraseña"))
+        if user in employee and clave in password:
+            print("bienvenido al sistema")
+        else:
+            print("usuario o contraseña incorrecta")    
+            break
